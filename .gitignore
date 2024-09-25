@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # history files
 .history/
+public/sytles/patternfly.css
