@@ -1,15 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import '@patternfly/patternfly/patternfly.css';
+import { PageLayout } from '../components/PageLayout'
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<button class="pf-v6-c-button pf-m-small pf-m-primary" type="button">
-			<span class="pf-v6-c-button__text">Primary</span>
-		</button>
-	</main>
+	<PageLayout client:only>
+		<main>
+			<h1>Welcome to Astro</h1>
+			<p>
+				Welcome to Astro, a new kind of static site builder. Astro combines the best parts of modern build tools, like
+				React and Vue, and the performance and developer experience of static sites.
+			</p>
+			<p>
+				To get started, check out the <a href="https://docs.astro.build">Astro documentation</a>.
+			</p>
+		</main>
+	</PageLayout>
 </Layout>
 
 <style>
